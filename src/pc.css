@@ -285,10 +285,11 @@ html, body {
     }
 
     .works_description {
-        width: 14em;
+        width: 13em;
     }
     .links_description {
         width: 18em;
+        text-aligin: center;
     }
 
     .videos {
