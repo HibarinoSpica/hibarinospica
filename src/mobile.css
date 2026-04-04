@@ -1,0 +1,427 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
+
+@media ( max-device-width: 767px ) {
+    .page {
+        position: absolute;
+        width: 100%;
+        min-height: 100%;
+        top: 0;
+        left: 0;
+    }
+
+    .content_home, .content_works, .content_links {
+        position: relative;
+        width: 100%;
+        height: 600px;
+        background-color: #222222;
+        padding-bottom:140px;
+    }
+    .content_works {
+        top: 32px;
+        padding-bottom:140px;
+    }
+
+    .content_links {
+        top: 32px;
+        padding-bottom: 400px;
+    }
+
+    header {
+        position: fixed;
+        background-color: white;
+        width: 100%;
+        height: 64px;
+        top: 0;
+        left: 0;
+        z-index: 2;
+    }
+
+    .logo {
+        position: fixed;
+        width: auto;
+        height: 62px;
+        left: 16px;
+    }
+
+    .menubutton {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 24px;
+        width: 30px;
+        top: 18px;
+        right: 16px;
+        cursor: pointer;
+        position: fixed;
+        z-index: 4;
+    }
+
+    .menubutton span {
+        position: relative;
+        width: 100%;
+        height: 2px;
+        background-color: black;
+    }
+
+    .space {
+        position: relative;
+        top: 6px;
+        right: 0;
+        width: 50%;
+        height: 64px;
+        border-bottom: 1px solid black;
+        margin: 16px;
+        margin: 0 auto;
+    }
+
+    .close_button {
+        position: fixed;
+        display: none;
+        width: 40%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        z-index: 5;
+    }
+
+    #menutoggle {
+        display: none;
+    }
+    #menutoggle:checked ~ .links {
+        display: flex;
+        animation: slideIn 0.5s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+    }
+    #menutoggle:checked ~ :not(.links, .menubutton) {
+        filter: brightness( 50% );
+    }
+    #menutoggle:checked ~ .close_button {
+        display: inline-block;
+    }
+    @keyframes slideIn {
+        0% {
+            transform: translateX(180px);
+            opacity: 0;
+        }
+        100% {
+            transform: translateX(0);
+        }
+        40%,100% {
+            opacity: 1;
+        }
+    }
+
+
+    .links {
+        position: fixed;
+        display: none;
+        top: 0;
+        width: 60%;
+        height: 100%;
+        right: 0;
+        flex-direction: column;
+        background-color: white;
+        z-index: 3;
+    }
+
+    .link, .dummylink {
+        position: relative;
+        display: inline-block;
+        border-bottom: 1px solid black;
+        margin: 16px;
+        font-size: 24px;
+        width: 50%;
+        height: 32px;
+        text-decoration: none;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .link {
+        color: #222222;
+    }
+
+    .dummylink {
+        color: dimgray;
+    }
+
+    .link:hover {
+        color: dimgray;
+    }
+
+    .banner {
+        position: relative;
+        width: 100%;
+        height: 400px;
+        top: 16px;
+        right: 0;
+        left: 0;
+        margin: 0 auto;
+        background-image: url("images/Name_BG.jpg");
+        z-index: 0;
+        text-align: center;
+    }
+
+    .name, .name_en {
+        position: relative;
+        z-index: 1;
+        color: white;
+    }
+
+    .name{
+        font-size: 32px;
+        top: 164px;
+    }
+
+    .name_en {
+        font-size: 24px;
+        top: 128px;
+        font-weight: 200;
+    }
+
+    .name, .name_en {
+        animation: fadeIn 2s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+    }
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    .AboutMeLogo {
+        opacity: 0;
+        position: absolute;
+        width: auto;
+        height: 24%;
+        top: 124px;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        animation: fadeIn 2s 0.3s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+    }
+
+    .AboutMeTitle {
+        opacity: 0;
+        position: absolute;
+        color: white;
+        font-size: 64px;
+        font-weight: 400;
+        top: 4px;
+        width: 4.8em;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        animation: fadeIn 2s 0.2s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+    }
+
+    .AboutMe {
+        opacity: 0;
+        position: absolute;
+        width: 60%;
+        height: 320px;
+        top: 164px;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        animation: fadeIn 2s 0.3s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+    }
+
+    .AboutMe #text {
+        position: relative;
+        font-size: 18px;
+        font-weight: 100;
+        top: 140px;
+        color: white;
+    }
+
+    footer {
+        position: relative;
+        background-color: #444444;
+        width: 100%;
+        height: 140px;
+        left: 0;
+        right: 0;
+    }
+
+    .footer_works {
+        top: 2000px;
+    }
+    .footer_home {
+        top: 90px;
+    }
+
+    .sitemap {
+        position: relative;
+        display: flex;
+        width: 50%;
+        height: 32px;
+        left: 0;
+        top: 0;
+        margin: 0 auto;
+    }
+
+    .sitemap p {
+        top: 8px;
+        width: 1em;
+    }
+
+    .FooterLink {
+        display: inline-block;
+        top: 8px;
+        width: 5em;
+    }
+
+    .FooterLink, .sitemap p {
+        position: relative;
+        height: 16px;
+        color: white;font-weight: 100;
+        font-size: 16px;
+        margin: 0 auto;
+    }
+
+    .FooterLink:hover {
+        text-decoration: none;
+    }
+
+    .FooterLogo {
+        display: flex;
+        position: relative;
+        width: auto;
+        height: 64%;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        top: 14px;
+    }
+
+    .copyright {
+        position: absolute;
+        color: white;
+        font-weight: 100;
+        right: 8px;
+        top: 110px;
+        font-size: 10px;
+    }
+
+    .works_title, .links_title {
+        position: absolute;
+        color: white;
+        font-size: 64px;
+        font-weight: 400;
+        top: 32px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        animation: fadeIn 2s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+    }
+    .works_title {
+        width: 3em;
+    }
+    .links_title {
+        width: 2.5em;
+    }
+
+    .works_description, .links_description {
+        opacity: 0;
+        position: absolute;
+        color: white;
+        font-size: 18px;
+        font-weight: 100;
+        left: 16px;
+        top: 132px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        animation: fadeIn 2s 0.2s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+    }
+    .works_description {
+        width: 14em;
+    }
+    .links_description {
+        width: 18em;
+    }
+
+    .videos {
+        position: absolute;
+        left: 0;
+        right: 0;
+        width: 320px;
+        height:： auto;
+        margin: 0 auto;
+        top: 200px;
+        display: flex;
+        flex-wrap: wrap;
+        animation: fadeIn 2s 0.3s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+        justify-content: center;
+    }
+
+    .video {
+        aspect-ratio: 16 / 9;
+        width: 100%;
+        height: auto;
+    }
+
+    .sns_links {
+        opacity: 0;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        top: 200px;
+        width: 80%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        animation: fadeIn 2s 0.3s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+    }
+
+    .link_button, .link_button_dummy {
+        left: 0;
+        right: 0;
+        margin: 32px 28px;
+        position: relative;
+        background-color: white;
+        aspect-ratio: 1 / 1;
+        width: 30%;
+        height: auto;
+        border-radius: 18%;
+    }
+
+    .link_button_dummy {
+        opacity: 0;
+    }
+
+    .x, .youtube, .niconico, .soundcloud, .hatenablog, .tiktok, .instagram {
+        position: absolute;
+        height: auto;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto auto;
+        border: none;
+    }
+    .x {
+        width: 60%;
+    }
+    .youtube {
+        width: 80%;
+    }
+    .niconico {
+        width: 80%;
+    }
+    .soundcloud {
+        width: 80%;
+    }
+    .hatenablog {
+        width: 80%;
+    }
+    .tiktok {
+        width: 80%;
+    }
+    .instagram {
+        width: 80%;
+    }
+}
