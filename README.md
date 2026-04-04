@@ -1,4 +1,4 @@
-## Hi there 👋
+Hibarino Spica official homepage
 
 <!--
 **HibarinoSpica/hibarinospica** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
