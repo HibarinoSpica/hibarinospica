@@ -337,10 +337,11 @@
         animation: fadeIn 2s 0.2s cubic-bezier(0.33, 1, 0.68, 1) forwards;
     }
     .works_description {
-        width: 14em;
+        width: 13em;
     }
     .links_description {
         width: 18em;
+        text-aligin: center;
     }
 
     .videos {
