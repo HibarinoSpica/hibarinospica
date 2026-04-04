@@ -341,7 +341,7 @@
     }
     .links_description {
         width: 18em;
-        text-aligin: center;
+        font-size: 14px;
     }
 
     .videos {
